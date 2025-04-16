@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Modulo 6 -  Seletores</title>
+  <style>
+    .paragrafo-estilizado {
+      color: darkblue;
+      font-weight: bold;
+    }
+
+    .item-estilizado {
+      color: green;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="titulo">Título original</h1>
+
+  <ul id="lista">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur a eveniet accusantium ipsum adipisci optio cum quod assumenda. Ipsa, eveniet beatae cumque ea excepturi enim ullam voluptatum maxime velit iusto!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quam necessitatibus debitis cum et sapiente, inventore officia saepe deleniti cumque, aut dolor quo perspiciatis sequi veritatis. Nisi consequatur harum praesentium.</p>
+
+  <button id="meu-botao">Clique aqui</button>
+
+  <script>
+
+    const titulo = document.getElementById('titulo');
+    titulo.textContent = 'Novo Título com JavaScript';
+
+    const itens = document.querySelectorAll('#lista li');
+    itens.forEach(item => {
+      item.classList.add('item-estilizado');
+    });
+
+    const paragrafos = document.querySelectorAll('p');
+    paragrafos.forEach(p => {
+      p.classList.add('paragrafo-estilizado');
+    });
+
+    const botao = document.getElementById('meu-botao');
+    botao.textContent = 'Texto alterado';
+  </script>
+
+</body>
+</html>
